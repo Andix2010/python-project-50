@@ -23,7 +23,12 @@ cd python-project-50
 ## Использование
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+<details>
+<summary>Пример использования в stylish формате</summary>
+  
+[![asciicast](https://asciinema.org/a/cEIora44rs3K8iN3.svg)](https://asciinema.org/a/cEIora44rs3K8iN3)
 
+</details>
 ---
 
 <details>
