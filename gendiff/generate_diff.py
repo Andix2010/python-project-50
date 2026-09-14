@@ -6,7 +6,6 @@ def generate_diff(file_path1: str, file_path2: str) -> str:
     file1 = read_file(file_path1)
     file2 = read_file(file_path2)
 
-    
     diff_dict = {
         "added": {},
         "removed": {},
@@ -21,7 +20,7 @@ def generate_diff(file_path1: str, file_path2: str) -> str:
             diff_dict["removed"][key] = file1[key]
         elif file1[key] == file2[key]:
             diff_dict["unchanged"][key] = file1[key]
-        elif file1[key] != file2[key]:                  ## changed
+        elif file1[key] != file2[key]:                  # changed
             diff_dict["added"][key] = file2[key]
             diff_dict["removed"][key] = file1[key]
 
