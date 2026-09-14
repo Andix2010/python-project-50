@@ -1,6 +1,7 @@
 # Вычислитель отличий (Python)
 
 [![hexlet-check](https://github.com/Andix2010/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Andix2010/python-project-50/actions)
+[![Python application](https://github.com/Andix2010/python-project-50/actions/workflows/python-app.yml/badge.svg)](https://github.com/Andix2010/python-project-50/actions/workflows/python-app.yml)
 
 В этом проекте отрабатывается работа с коллекциями. Изучаются способы построения и обхода деревьев. Вы познакомитесь с разными форматами данных (JSON, YAML), научитесь их парсить и формировать. Начнете писать тесты (pytest) и освоите разработку через них. Познакомитесь с непрерывной интеграцией (CI) и элементами экстремального программирования (XP)
 
