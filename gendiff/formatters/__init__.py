@@ -1,5 +1,5 @@
-from .stylish import stylish_format_output
+from .stylish import stylish
 
 __all__ = (
-    "stylish_format_output",
+    "stylish",
 )

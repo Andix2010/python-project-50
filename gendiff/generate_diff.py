@@ -1,28 +1,45 @@
-from gendiff.formatters import stylish_format_output
+from gendiff.formatters import stylish
 from gendiff.parsers import read_file
 
 
-def generate_diff(file_path1: str, file_path2: str) -> str:
+def generate_diff(file_path1: str, file_path2: str, format_func=stylish) -> str:
     file1 = read_file(file_path1)
     file2 = read_file(file_path2)
 
-    diff_dict = {
-        "added": {},
-        "removed": {},
-        "unchanged": {},
-    }
+    def search(file1, file2):
 
-    all_keys = sorted(set(file1) | set(file2))
-    for key in all_keys:
-        if key not in file1:
-            diff_dict["added"][key] = file2[key]
-        elif key not in file2:
-            diff_dict["removed"][key] = file1[key]
-        elif file1[key] == file2[key]:
-            diff_dict["unchanged"][key] = file1[key]
-        elif file1[key] != file2[key]:                  # changed
-            diff_dict["added"][key] = file2[key]
-            diff_dict["removed"][key] = file1[key]
+        diff_dict = {}
 
-    return stylish_format_output(all_keys, diff_dict)
+        all_keys = sorted(set(file1) | set(file2))
+        for key in all_keys:
+            if key not in file1:
+                diff_dict[key] = {'type': 'added', 
+                                  'value': file2[key]}
+                
+            elif key not in file2:
+                diff_dict[key] = {'type': 'removed',
+                                  'value': file1[key]}
+                
+            elif file1[key] == file2[key]:
+                diff_dict[key] = {'type': 'unchanged',
+                                  'value': file1[key]}
+                
+            elif file1[key] != file2[key]:
+                if not isinstance(file1[key], dict) or not isinstance(file2[key], dict):
+                    diff_dict[key] = {'type': 'changed',
+                                      'old': file1[key],
+                                      'new': file2[key],
+                                      }
+                    
+                else:
+                    children1 = file1[key]
+                    children2 = file2[key]
+                    diff_dict[key] = {'type': 'nested',
+                                      'children': search(children1, children2)
+                                      }
+
+        return diff_dict
+
+    diff_dict = search(file1, file2)
+    return format_func(diff_dict)
 
