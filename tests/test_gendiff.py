@@ -19,13 +19,20 @@ def test_cli_parsing(monkeypatch):
 
 
 def test_stylish():
-    result = get_test_data_path("stylish_output.txt").read_text()
-    nested_result = get_test_data_path("nested_stylish_output").read_text()
-
+    plain_stylish_res = get_test_data_path("stylish_output.txt").read_text()
+    nested_stylish_res = get_test_data_path("nested_stylish_output").read_text()
+    
     file1_path = get_test_data_path("file1.json")
     file2_path = get_test_data_path("file2.json")
-    assert generate_diff(file1_path, file2_path) == nested_result
-
+    assert generate_diff(file1_path, file2_path) == nested_stylish_res
+    
     file1_path = get_test_data_path("file1.yml")
     file2_path = get_test_data_path("file2.yml")
-    assert generate_diff(file1_path, file2_path) == result
+    assert generate_diff(file1_path, file2_path) == plain_stylish_res
+
+
+def test_plain():
+    file1_path = get_test_data_path("file1.json")
+    file2_path = get_test_data_path("file2.json")
+    nested_plain_res = get_test_data_path("nested_plain_output").read_text()
+    assert generate_diff(file1_path, file2_path, 'plain') == nested_plain_res
