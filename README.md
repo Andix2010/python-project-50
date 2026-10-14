@@ -27,11 +27,15 @@ cd python-project-50
 <details>
 <summary>Примеры использования</summary>
   
-  **Плоские структуры:**
+  **Плоские структуры в stylish-формате:**
 [![asciicast](https://asciinema.org/a/cEIora44rs3K8iN3.svg)](https://asciinema.org/a/cEIora44rs3K8iN3)
 
-  **Вложенные структуры:**
+  **Вложенные структуры в stylish-формате:**
 [![asciicast](https://asciinema.org/a/9FxpbvXMMaX6iwjk.svg)](https://asciinema.org/a/9FxpbvXMMaX6iwjk)
+
+  **Вложенные структуры в plain-формате:**
+[![asciicast](https://asciinema.org/a/UInJOYPRckSlhzIY.svg)](https://asciinema.org/a/UInJOYPRckSlhzIY)
+
 </details>
 ---
 
