@@ -7,7 +7,7 @@ def stylish(diff_dict: dict, nested: int = 0) -> str:
             result.append(value)
 
         elif info['type'] == 'changed':
-            old_value =format_line(indent, '-', key, info['old'], nested + 1)
+            old_value = format_line(indent, '-', key, info['old'], nested + 1)
             result.append(old_value)
             new_value = format_line(indent, '+', key, info['new'], nested + 1)
             result.append(new_value)
