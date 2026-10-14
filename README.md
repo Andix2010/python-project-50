@@ -25,16 +25,9 @@ cd python-project-50
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 <details>
-<summary>Примеры использования</summary>
+<summary>Пример использования</summary>
   
-  **Плоские структуры в stylish-формате:**
-[![asciicast](https://asciinema.org/a/cEIora44rs3K8iN3.svg)](https://asciinema.org/a/cEIora44rs3K8iN3)
-
-  **Вложенные структуры в stylish-формате:**
-[![asciicast](https://asciinema.org/a/9FxpbvXMMaX6iwjk.svg)](https://asciinema.org/a/9FxpbvXMMaX6iwjk)
-
-  **Вложенные структуры в plain-формате:**
-[![asciicast](https://asciinema.org/a/UInJOYPRckSlhzIY.svg)](https://asciinema.org/a/UInJOYPRckSlhzIY)
+[![asciicast](https://asciinema.org/a/jgmF34Q5ZfjByao0.svg)](https://asciinema.org/a/jgmF34Q5ZfjByao0)
 
 </details>
 ---
