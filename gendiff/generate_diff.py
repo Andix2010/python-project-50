@@ -1,10 +1,10 @@
-from gendiff.formatters import plain, stylish
+from gendiff.formatters import json_format, plain, stylish
 from gendiff.parsers import read_file
 
 FORMATTERS = {
     'stylish': stylish,
     'plain': plain,
-    'json': ''
+    'json': json_format
 }
 
 
