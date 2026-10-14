@@ -53,4 +53,4 @@ def format_line(indent, prefix, key, value, nested):
     rendered = render_value(value, nested)
     if rendered:
         return f"{indent}  {prefix} {key}: {rendered}"
-    return f"{indent}  {prefix} {key}:"
+    return f"{indent}  {prefix} {key}: "
