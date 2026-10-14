@@ -25,7 +25,7 @@ def generate_diff(file_path1: str, file_path2: str, format_func=stylish) -> str:
                                   'value': file1[key]}
                 
             elif file1[key] != file2[key]:
-                if not isinstance(file1[key], dict) or not isinstance(file2[key], dict):
+                if not isinstance(file1[key], dict) or not isinstance(file2[key], dict):  # ruff: ignore[line-too-long]
                     diff_dict[key] = {'type': 'changed',
                                       'old': file1[key],
                                       'new': file2[key],

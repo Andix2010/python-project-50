@@ -8,6 +8,8 @@ package-install:
 	uv tool install dist/*.whl
 
 package-reinstall:
+	rm -rf dist/*
+	uv build
 	uv tool install --force dist/*.whl
 
 lint:
